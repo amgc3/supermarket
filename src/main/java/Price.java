@@ -1,8 +1,8 @@
 import java.math.BigDecimal;
 
 public class Price {
-    private BigDecimal price;
-    String promotion;
+    private final BigDecimal price;
+    private final String promotion;
 
     public Price(String price, String promotion) {
         this.price = new BigDecimal(price);
