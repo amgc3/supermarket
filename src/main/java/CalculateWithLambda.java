@@ -23,6 +23,7 @@ public class CalculateWithLambda {
                 .reduce(new BigDecimal("0.00"), (BigDecimal subtotal, Map.Entry<String, Integer> entry) -> {
                     String item = entry.getKey();
                     Integer quantity = entry.getValue();
+                    // Melons are 50p each, but are available as ‘buy one get one free’
                     if (item == "Melon" && quantity >= 2) {
                         return subtotal
                                 .add(new BigDecimal(Integer.toString((quantity / 2) + (quantity % 2)))
