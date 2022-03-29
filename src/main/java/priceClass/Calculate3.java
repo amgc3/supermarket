@@ -1,8 +1,10 @@
+package priceClass;
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CalculateWithLambda2 {
+public class Calculate3 {
 
     public static HashMap<String, Integer> sortBasket(String[] items) {
         HashMap<String, Integer> itemMap = new HashMap<>();

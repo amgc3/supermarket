@@ -1,3 +1,5 @@
+package priceClass;
+
 import java.math.BigDecimal;
 
 public class Price {
