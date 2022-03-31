@@ -21,7 +21,7 @@ public class Price {
             case "3for2":
                 return new BigDecimal(Integer.toString((quantity / 3) * 2 + (quantity % 3)))
                         .multiply(this.price);
-            case "1for1":
+            case "none":
             default:
                 return new BigDecimal(Integer.toString(quantity)).multiply(this.price);
 
