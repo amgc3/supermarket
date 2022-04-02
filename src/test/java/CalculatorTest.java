@@ -20,4 +20,14 @@ public class CalculatorTest {
                 () -> assertEquals(0, Calculator.multiply(1, 0)));
     }
 
+    @Test
+    @DisplayName("Ensure correct handling of zero")
+    void testMultiplyWithZero() {
+        assertAll(
+                () -> assertEquals(0, Calculator.multiply(0, 5), "Multiple with zero should be zero"),
+                () -> assertEquals(0, Calculator.multiply(5, 0), "Multiple with zero should be zero")
+        );
+    }
+
+
 }
