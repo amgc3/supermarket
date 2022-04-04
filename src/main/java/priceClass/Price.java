@@ -11,7 +11,7 @@ public class Price {
         this.promotion = promotion;
     }
 
-     BigDecimal totalPrice(Integer quantity) {
+     public BigDecimal totalPrice(Integer quantity) {
          System.out.println("promotion " + promotion +  " quantity " + quantity + " price " + price );
 
          switch (promotion) {
