@@ -24,7 +24,7 @@ public class PriceTest {
     void testTotalPriceWithoutPromotion() {
         price = new Price("0.20", "none");
         assertEquals(new BigDecimal("1.60"), price.totalPrice(8),
-                "Total of one item should return item price");
+                "Total should return item price multiplied by quantity");
     }
 
     @Test
