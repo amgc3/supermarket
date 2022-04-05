@@ -14,16 +14,16 @@ public class Calculate3 {
         return itemFrequencyMap;
     }
 
-    public static BigDecimal getTotal(HashMap<String, Integer> itemMap, HashMap<String, Price> priceMap) {
-        System.out.println(itemMap);
+    public static BigDecimal getTotal(HashMap<String, Integer> itemFrequencyMap, HashMap<String, Price> itemPriceMap) {
+        System.out.println(itemFrequencyMap);
 
-        return itemMap.entrySet()
+        return itemFrequencyMap.entrySet()
                 .stream()
                 .reduce(new BigDecimal("0.00"), (BigDecimal subtotal, Map.Entry<String, Integer> entry) -> {
                     String item = entry.getKey();
                     Integer quantity = entry.getValue();
                     return subtotal
-                            .add(priceMap.get(item).totalPrice(quantity));
+                            .add(itemPriceMap.get(item).totalPrice(quantity));
                 }, BigDecimal::add);
 
     }
