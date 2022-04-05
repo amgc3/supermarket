@@ -7,11 +7,11 @@ import java.util.Map;
 public class Calculate3 {
 
     public static HashMap<String, Integer> sortBasket(String[] items) {
-        HashMap<String, Integer> itemMap = new HashMap<>();
+        HashMap<String, Integer> itemFrequencyMap = new HashMap<>();
         for (String item : items) {
-            itemMap.put(item, itemMap.getOrDefault(item, 0) + 1);
+            itemFrequencyMap.put(item, itemFrequencyMap.getOrDefault(item, 0) + 1);
         }
-        return itemMap;
+        return itemFrequencyMap;
     }
 
     public static BigDecimal getTotal(HashMap<String, Integer> itemMap, HashMap<String, Price> priceMap) {
