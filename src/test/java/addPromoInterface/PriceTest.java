@@ -56,8 +56,13 @@ class PriceTest {
     @DisplayName("When ThreeForTwo and quantity is not a multiple of 3, it should charge one or two items full price")
     void shouldChargeSomeFullPrice() {
         price = new Price("0.15", new ThreeForTwo());
-        assertEquals(new BigDecimal("0.75"), price.totalPrice(7));
-        assertEquals(new BigDecimal("0.60"), price.totalPrice(5));
+
+        assertAll(
+                () -> assertEquals(new BigDecimal("0.75"), price.totalPrice(7)),
+                () -> assertEquals(new BigDecimal("0.60"), price.totalPrice(5))
+        );
+
+
 
     }
 
