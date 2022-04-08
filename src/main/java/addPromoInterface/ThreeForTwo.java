@@ -5,4 +5,9 @@ public class ThreeForTwo implements Promotion{
     public int getQuantity(int quantity) {
         return quantity / 3 * 2 + (quantity % 3);
     }
+
+    @Override
+    public String toString() {
+        return "ThreeForTwo";
+    }
 }

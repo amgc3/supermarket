@@ -5,4 +5,9 @@ public class FullPrice implements Promotion{
     public int getQuantity(int quantity) {
         return quantity;
     }
+
+    @Override
+    public String toString() {
+        return "FullPrice";
+    }
 }

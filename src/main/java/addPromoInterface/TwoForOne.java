@@ -5,4 +5,9 @@ public class TwoForOne implements Promotion{
     public int getQuantity(int quantity) {
         return (quantity / 2) + (quantity % 2);
     }
+
+    @Override
+    public String toString() {
+        return "TwoForOne";
+    }
 }
